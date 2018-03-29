@@ -75,3 +75,12 @@ $web-font-path: "https://fonts.googleapis.com/css?family=News+Cycle:400,700" !de
 // Progress bars ===============================================================
 
 // Containers ==================================================================
+
+// Others
+
+.switcher {
+    span {
+        opacity: 0;
+        transition: opacity 0.7s ease-out;
+    }
+}
