@@ -1,0 +1,63 @@
+---
+layout: page
+title: InfiniDev
+---
+<!doctype html>
+
+<div class="row">
+    <div class="col-md-12 text-center">
+        <div style="margin-top: 15px"></div>
+        <img class="img-fluid mx-auto" src="{{ "/assets/img/logo_250.png" | relative_url }}" alt="InfiniDev">
+        <h1>Nicolas Vanhoren</h1>
+        <h2>Freelance Web and Full Stack Developer</h2>
+        <div style="margin-top: 30px"></div>
+        <p id="skills-switcher" class="text-primary lead"></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 text-center">
+        <div style="margin-top: 20px; margin-bottom: 20px">
+            <img class="img-fluid mx-auto thumbnail" src="{{ "/assets/img/me.png" | relative_url }}" alt="Nicolas Vanhoren">
+        </div>
+    </div>
+    <div class="col-md-6 text-center">
+        <div style="margin-top: 70px; margin-bottom: 70px">
+            <p class="h1 text-primary" style="margin-bottom: 20px">Download CV</p>
+            <p>
+                <a class="btn btn-primary btn-lg" target="new"
+                    href="https://drive.google.com/open?id=0B5rbLqk2Ska9djh5eW1ONTRaZkk">.pdf</a>
+                <a class="btn btn-primary btn-lg" target="new"
+                    href="https://drive.google.com/open?id=0B5rbLqk2Ska9NGxFWGp0bjh3LXM">.docx</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="row" style="margin-top: 30px; margin-bottom: 50px">
+    <div class="col-md-12 text-center">
+        <p class="h2">Clients</p>
+    </div>
+    {% include client.html image='/assets/img/clients/maradio.png' url='http://maradio.be' alt='MaRadio.be' %}
+    {% include client.html image='/assets/img/clients/odoo.png' url='https://www.odoo.com' alt='Odoo' %}
+    {% include client.html image='/assets/img/clients/tapptic.png' url='http://tapptic.com' alt='Tapptic' %}
+    {% include client.html image='/assets/img/clients/jde.png' url='http://www.lejde.be' alt='Le JDE' %}
+    {% include client.html image='/assets/img/clients/hlo.png' url='https://herrmuttlobby.com/' alt='Hermutt Lobby' %}
+    {% include client.html image='/assets/img/clients/bequiet.png' url='https://www.bequiet.be' alt='BeQuiet' %}
+    {% include client.html image='/assets/img/clients/cap.png' url='http://www.capconsultance.be' alt='Cap Consultance' %}
+    {% include client.html image='/assets/img/clients/psg.png' url='http://www.planetstrategygroup.com' alt='Planet Strategy Group' %}
+</div>
+<div class="row">
+    <div class="website-footer col-md-12 text-center">
+        <p>
+            <a href="https://nicolas-van.github.io">Blog</a> //
+            <a href="https://github.com/nicolas-van">Github</a> //
+            <a href="https://www.linkedin.com/in/nicolasvanhoren/">LinkedIn</a> //
+            <a href="https://twitter.com/nicolasvanhoren">Twitter</a>
+        </p>
+        <p>
+          Copyright © 2013-2017 Nicolas Vanhoren
+          <br>
+          All Rights Reserved
+        </p>
+        <div style="margin-top: 10px"></div>
+    </div>
+</div>
