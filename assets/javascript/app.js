@@ -18,14 +18,15 @@
             this.texts = texts;
             this.current = -1;
             this.state = "disappearing";
+            this.delay = 1.4;
             this.on("appendedToDom", this.appended);
             this.el.innerHTML = "<span></span>";
             this.el.querySelector("span").style.opacity = 0;
-            this.el.querySelector("span").style.transition = "opacity 0.7s ease-out";
+            this.el.querySelector("span").style.transition = `opacity ${this.delay / 2)s ease-out`;
         }
         appended() {
             this.next();
-            setInterval(this.next.bind(this), 700);
+            setInterval(this.next.bind(this), (this.delay / 2) * 1000);
         }
         next() {
             if (this.state === "disappearing") {
