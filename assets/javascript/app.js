@@ -22,7 +22,7 @@
             this.on("appendedToDom", this.appended);
             this.el.innerHTML = "<span></span>";
             this.el.querySelector("span").style.opacity = 0;
-            this.el.querySelector("span").style.transition = `opacity ${this.delay / 2)s ease-out`;
+            this.el.querySelector("span").style.transition = `opacity ${this.delay / 2}s ease-out`;
         }
         appended() {
             this.next();
