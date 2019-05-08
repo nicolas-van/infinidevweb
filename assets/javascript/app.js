@@ -20,6 +20,7 @@
             this.state = "disappearing";
             this.on("appendedToDom", this.appended);
             this.on("dom:transitionend", this.transitionEnd);
+            this.on("dom:transitioncancel", this.transitionEnd);
             this.el.innerHTML = "<span></span>";
             this.el.querySelector("span").style.opacity = 0;
             this.el.querySelector("span").style.transition = "opacity 0.7s ease-out";
