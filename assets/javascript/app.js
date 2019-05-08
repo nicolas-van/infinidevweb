@@ -25,7 +25,7 @@
         }
         appended() {
             this.next();
-            setInterval(this.next.bind(this), 7000);
+            setInterval(this.next.bind(this), 700);
         }
         next() {
             if (this.state === "disappearing") {
