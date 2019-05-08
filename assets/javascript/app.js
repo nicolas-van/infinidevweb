@@ -19,16 +19,13 @@
             this.current = -1;
             this.state = "disappearing";
             this.on("appendedToDom", this.appended);
-            this.on("dom:transitionend", this.transitionEnd);
             this.el.innerHTML = "<span></span>";
-            this.el.querySelector("span").style.opacity = 0.01;
+            this.el.querySelector("span").style.opacity = 0;
             this.el.querySelector("span").style.transition = "opacity 0.7s ease-out";
         }
         appended() {
             this.next();
-        }
-        transitionEnd() {
-            this.next();
+            setInterval(this.next.bind(this), 7000);
         }
         next() {
             if (this.state === "disappearing") {
@@ -40,7 +37,7 @@
                 }.bind(this), 0);
             } else { // appearing
                 this.state = "disappearing";
-                this.el.querySelector("span").style.opacity = 0.01;
+                this.el.querySelector("span").style.opacity = 0;
             }
         }
     };
