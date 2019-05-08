@@ -20,6 +20,9 @@
             this.state = "disappearing";
             this.on("appendedToDom", this.appended);
             this.on("dom:transitionend", this.transitionEnd);
+            this.el.innerHTML = "<span></span>";
+            this.el.querySelector("span").style.opacity = 0;
+            this.el.querySelector("span").style.transition = "opacity 0.7s ease-out";
         }
         appended() {
             this.next();
@@ -31,8 +34,7 @@
             if (this.state === "disappearing") {
                 this.current = (this.current + 1) % this.texts.length;
                 this.state = "appearing";
-                this.el.innerHTML = "";
-                this.el.innerHTML = "<span>" + this.texts[this.current] + "</span>";
+                this.el.querySelector("span").innerText = this.texts[this.current];
                 setTimeout(function() {
                     this.el.querySelector("span").style.opacity = 1;
                 }.bind(this), 0);
